@@ -5,6 +5,50 @@
  */
 
 /**
+ * Implements hook_ds_field_settings_info().
+ */
+function pro_101_testimonials_feature_ds_field_settings_info() {
+  $export = array();
+
+  $ds_fieldsetting = new stdClass;
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|testimonial|full';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'testimonial';
+  $ds_fieldsetting->view_mode = 'full';
+  $ds_fieldsetting->settings = array(
+    'title' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+  );
+  $export['node|testimonial|full'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass;
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|testimonial|teaser';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'testimonial';
+  $ds_fieldsetting->view_mode = 'teaser';
+  $ds_fieldsetting->settings = array(
+    'title' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '0',
+        'wrapper' => 'strong',
+        'class' => '',
+      ),
+    ),
+  );
+  $export['node|testimonial|teaser'] = $ds_fieldsetting;
+
+  return $export;
+}
+
+/**
  * Implements hook_ds_layout_settings_info().
  */
 function pro_101_testimonials_feature_ds_layout_settings_info() {
@@ -22,7 +66,7 @@ function pro_101_testimonials_feature_ds_layout_settings_info() {
     'hide_sidebars' => 0,
     'regions' => array(
       'left' => array(
-        0 => 'ds_user_picture',
+        0 => 'field_title_graphic',
         1 => 'title',
         2 => 'field_title',
         3 => 'field_city_state',
@@ -32,7 +76,7 @@ function pro_101_testimonials_feature_ds_layout_settings_info() {
       ),
     ),
     'fields' => array(
-      'ds_user_picture' => 'left',
+      'field_title_graphic' => 'left',
       'title' => 'left',
       'field_title' => 'left',
       'field_city_state' => 'left',
