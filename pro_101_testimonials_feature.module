@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Pro 101 Testimonial Feature feature.
+ */
+
+include_once 'pro_101_testimonials_feature.features.inc';
