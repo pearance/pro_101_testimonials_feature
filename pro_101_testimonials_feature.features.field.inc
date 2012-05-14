@@ -271,7 +271,7 @@ function pro_101_testimonials_feature_field_default_fields() {
       ),
       'module' => 'image',
       'settings' => array(
-        'default_image' => 0,
+        'default_image' => '1',
         'uri_scheme' => 'public',
       ),
       'translatable' => '0',
