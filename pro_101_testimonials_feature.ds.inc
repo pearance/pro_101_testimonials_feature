@@ -62,8 +62,6 @@ function pro_101_testimonials_feature_ds_layout_settings_info() {
   $ds_layout->view_mode = 'full';
   $ds_layout->layout = 'ds_2col';
   $ds_layout->settings = array(
-    'hide_empty_regions' => 0,
-    'hide_sidebars' => 0,
     'regions' => array(
       'left' => array(
         0 => 'field_title_graphic',
@@ -72,7 +70,7 @@ function pro_101_testimonials_feature_ds_layout_settings_info() {
         3 => 'field_city_state',
       ),
       'right' => array(
-        0 => 'body',
+        4 => 'body',
       ),
     ),
     'fields' => array(
@@ -83,6 +81,15 @@ function pro_101_testimonials_feature_ds_layout_settings_info() {
       'body' => 'right',
     ),
     'classes' => array(),
+    'wrappers' => array(
+      'left' => 'div',
+      'right' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'hide_page_title' => '0',
+    'page_option_title' => '',
+    'hide_sidebars' => 0,
   );
   $export['node|testimonial|full'] = $ds_layout;
 

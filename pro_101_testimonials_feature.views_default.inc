@@ -15,14 +15,14 @@ function pro_101_testimonials_feature_views_default_views() {
   $view->description = 'List of testimonies from clients and other professionals.';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Testimonals';
+  $view->human_name = 'Testimonials';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Testimonals';
+  $handler->display->display_options['title'] = 'Testimonials';
   $handler->display->display_options['use_more_always'] = TRUE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'time';
@@ -164,7 +164,7 @@ function pro_101_testimonials_feature_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'testimonals';
+  $handler->display->display_options['path'] = 'testimonials';
   $handler->display->display_options['menu']['title'] = 'Testimonals';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['name'] = 'main-menu';
@@ -193,7 +193,7 @@ function pro_101_testimonials_feature_views_default_views() {
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['label'] = 'More Testimonials';
   $handler->display->display_options['footer']['area']['empty'] = FALSE;
-  $handler->display->display_options['footer']['area']['content'] = '<a href="testimonals">More Testimonials</a>';
+  $handler->display->display_options['footer']['area']['content'] = '<a href="testimonials">More Testimonials</a>';
   $handler->display->display_options['footer']['area']['format'] = 'plain_text';
   $handler->display->display_options['footer']['area']['tokenize'] = 0;
   $handler->display->display_options['block_description'] = 'Testimonials';

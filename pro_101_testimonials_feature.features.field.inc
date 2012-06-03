@@ -46,9 +46,8 @@ function pro_101_testimonials_feature_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
+          'type' => 'hidden',
           'weight' => '0',
         ),
         'full' => array(
@@ -128,9 +127,8 @@ function pro_101_testimonials_feature_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
+          'type' => 'hidden',
           'weight' => '3',
         ),
         'full' => array(
@@ -206,9 +204,8 @@ function pro_101_testimonials_feature_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
+          'type' => 'hidden',
           'weight' => '2',
         ),
         'full' => array(
@@ -271,7 +268,7 @@ function pro_101_testimonials_feature_field_default_fields() {
       ),
       'module' => 'image',
       'settings' => array(
-        'default_image' => '1',
+        'default_image' => '3',
         'uri_scheme' => 'public',
       ),
       'translatable' => '0',
@@ -284,21 +281,18 @@ function pro_101_testimonials_feature_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '4',
+        ),
+        'full' => array(
+          'label' => 'hidden',
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => '',
+            'image_style' => 'thumbnail',
           ),
           'type' => 'image',
-          'weight' => 4,
-        ),
-        'full' => array(
-          'label' => 'above',
-          'module' => 'file_entity',
-          'settings' => array(
-            'file_view_mode' => 'default',
-          ),
-          'type' => 'file_rendered',
           'weight' => '0',
         ),
         'teaser' => array(
