@@ -10,7 +10,7 @@
 function pro_101_testimonials_feature_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-testimonial-body'
+  // Exported field: 'node-testimonial-body'.
   $fields['node-testimonial-body'] = array(
     'field_config' => array(
       'active' => '1',
@@ -33,6 +33,7 @@ function pro_101_testimonials_feature_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '0',
@@ -91,7 +92,7 @@ function pro_101_testimonials_feature_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-testimonial-field_city_state'
+  // Exported field: 'node-testimonial-field_city_state'.
   $fields['node-testimonial-field_city_state'] = array(
     'field_config' => array(
       'active' => '1',
@@ -112,6 +113,7 @@ function pro_101_testimonials_feature_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(
         'max_length' => '100',
@@ -168,7 +170,7 @@ function pro_101_testimonials_feature_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-testimonial-field_title'
+  // Exported field: 'node-testimonial-field_title'.
   $fields['node-testimonial-field_title'] = array(
     'field_config' => array(
       'active' => '1',
@@ -189,6 +191,7 @@ function pro_101_testimonials_feature_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(
         'max_length' => '255',
@@ -245,7 +248,7 @@ function pro_101_testimonials_feature_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-testimonial-field_title_graphic'
+  // Exported field: 'node-testimonial-field_title_graphic'.
   $fields['node-testimonial-field_title_graphic'] = array(
     'field_config' => array(
       'active' => '1',
@@ -266,6 +269,7 @@ function pro_101_testimonials_feature_field_default_fields() {
           0 => 'fid',
         ),
       ),
+      'locked' => '0',
       'module' => 'image',
       'settings' => array(
         'default_image' => 0,
@@ -309,6 +313,7 @@ function pro_101_testimonials_feature_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'alt_field' => 0,
+        'default_image' => 0,
         'file_directory' => 'images',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',

@@ -64,6 +64,9 @@ function pro_101_testimonials_feature_strongarm() {
         'redirect' => array(
           'weight' => '5',
         ),
+        'mollom' => array(
+          'weight' => '99',
+        ),
       ),
       'display' => array(),
     ),
