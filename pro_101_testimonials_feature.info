@@ -2,6 +2,7 @@ name = Pro 101 Testimonials Feature
 description = Facility to manage client submitted testimonials.
 core = 7.x
 package = Pro 101 Features (G)
+php = 5.2.4
 version = 7.x-1.0
 project = pro_101_testimonials_feature
 dependencies[] = ctools
