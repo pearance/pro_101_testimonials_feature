@@ -44,4 +44,5 @@ features[variable][] = rh_node_redirect_testimonial
 features[variable][] = save_continue_testimonial
 features[variable][] = show_diff_inline_testimonial
 features[variable][] = show_preview_changes_testimonial
+features[variable][] = xmlsitemap_settings_node_testimonial
 features[views_view][] = testimonals

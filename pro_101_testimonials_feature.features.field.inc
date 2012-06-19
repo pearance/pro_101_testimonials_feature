@@ -309,13 +309,13 @@ function pro_101_testimonials_feature_field_default_fields() {
       'ds_extras_field_template' => '',
       'entity_type' => 'node',
       'field_name' => 'field_title_graphic',
-      'label' => 'Your Image',
+      'label' => 'Your Photo or Logo',
       'required' => 0,
       'settings' => array(
         'alt_field' => 0,
         'default_image' => 0,
         'file_directory' => 'images',
-        'file_extensions' => 'png gif jpg jpeg',
+        'file_extensions' => 'png gif jpg jpeg svg',
         'max_filesize' => '',
         'max_resolution' => '',
         'min_resolution' => '',
@@ -324,32 +324,13 @@ function pro_101_testimonials_feature_field_default_fields() {
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'media',
+        'module' => 'image',
         'settings' => array(
-          'allowed_schemes' => array(
-            'feed' => 0,
-            'http' => 'http',
-            'https' => 'https',
-            'private' => 'private',
-            'public' => 'public',
-          ),
-          'allowed_types' => array(
-            'audio' => 0,
-            'default' => 0,
-            'image' => 'image',
-            'video' => 0,
-          ),
-          'browser_plugins' => array(
-            'library' => 0,
-            'media_default--media_browser_1' => 0,
-            'media_internet' => 'media_internet',
-            'remote_file' => 'remote_file',
-            'upload' => 'upload',
-          ),
           'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+          'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'throbber',
         ),
-        'type' => 'media_generic',
+        'type' => 'image_image',
         'weight' => '4',
       ),
     ),
@@ -361,7 +342,7 @@ function pro_101_testimonials_feature_field_default_fields() {
   t('City, State');
   t('Don\'t enclose your testimony in quotes, they will be added automatically.');
   t('Optional.');
-  t('Your Image');
+  t('Your Photo or Logo');
   t('Your Testimonial');
   t('Your Title');
   t('example: Bronx, NY');
