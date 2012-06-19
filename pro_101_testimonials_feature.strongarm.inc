@@ -13,16 +13,18 @@ function pro_101_testimonials_feature_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'additional_settings__active_tab_testimonial';
-  $strongarm->value = 'edit-xmlsitemap';
-  $export['additional_settings__active_tab_testimonial'] = $strongarm;
+  $strongarm->name = 'contentanalysis_testimonial';
+  $strongarm->value = array(
+    0 => 'enable',
+  );
+  $export['contentanalysis_testimonial'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'auto_menutitle_testimonial';
-  $strongarm->value = 0;
-  $export['auto_menutitle_testimonial'] = $strongarm;
+  $strongarm->name = 'contentanalysis_type_testimonial_enable';
+  $strongarm->value = 1;
+  $export['contentanalysis_type_testimonial_enable'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -128,6 +130,27 @@ function pro_101_testimonials_feature_strongarm() {
   $strongarm->name = 'pathauto_node_testimonial_pattern';
   $strongarm->value = 'testimonials/[node:title]';
   $export['pathauto_node_testimonial_pattern'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_action_testimonial';
+  $strongarm->value = '0';
+  $export['rh_node_action_testimonial'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_redirect_response_testimonial';
+  $strongarm->value = '301';
+  $export['rh_node_redirect_response_testimonial'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_redirect_testimonial';
+  $strongarm->value = '';
+  $export['rh_node_redirect_testimonial'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
