@@ -116,7 +116,7 @@ function pro_101_testimonials_feature_views_default_views() {
   $handler->display->display_options['fields']['field_title']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_title']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_title']['field_api_classes'] = 0;
-  /* Field: Content: Edit link */
+  /* Field: Node: Edit link */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
