@@ -20,6 +20,9 @@ function pro_101_testimonials_feature_field_default_fields() {
         0 => 'node',
       ),
       'field_name' => 'body',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -72,7 +75,7 @@ function pro_101_testimonials_feature_field_default_fields() {
       'required' => 1,
       'settings' => array(
         'display_summary' => 0,
-        'text_processing' => '1',
+        'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -87,7 +90,7 @@ function pro_101_testimonials_feature_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '0',
+        'weight' => 0,
       ),
     ),
   );
