@@ -58,16 +58,19 @@ function pro_101_testimonials_feature_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '1',
+          'weight' => '2',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
         'redirect' => array(
-          'weight' => '5',
+          'weight' => '6',
         ),
         'mollom' => array(
           'weight' => '99',
+        ),
+        'metatags' => array(
+          'weight' => '8',
         ),
       ),
       'display' => array(),
@@ -106,6 +109,34 @@ function pro_101_testimonials_feature_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'nodeblock_comment_link_testimonial';
+  $strongarm->value = '0';
+  $export['nodeblock_comment_link_testimonial'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'nodeblock_node_link_testimonial';
+  $strongarm->value = '0';
+  $export['nodeblock_node_link_testimonial'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'nodeblock_testimonial';
+  $strongarm->value = '0';
+  $export['nodeblock_testimonial'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'nodeblock_view_mode_testimonial';
+  $strongarm->value = 'full';
+  $export['nodeblock_view_mode_testimonial'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_testimonial';
   $strongarm->value = array();
   $export['node_options_testimonial'] = $strongarm;
@@ -114,7 +145,7 @@ function pro_101_testimonials_feature_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_testimonial';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['node_preview_testimonial'] = $strongarm;
 
   $strongarm = new stdClass();

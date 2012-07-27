@@ -14,9 +14,11 @@ function pro_101_testimonials_feature_user_default_permissions() {
   $permissions['create testimonial content'] = array(
     'name' => 'create testimonial content',
     'roles' => array(
-      0 => 'anonymous user',
-      1 => 'developer',
-      2 => 'support',
+      0 => 'assistant',
+      1 => 'authenticated user',
+      2 => 'developer',
+      3 => 'professional',
+      4 => 'support',
     ),
     'module' => 'node',
   );
@@ -35,9 +37,10 @@ function pro_101_testimonials_feature_user_default_permissions() {
   $permissions['delete own testimonial content'] = array(
     'name' => 'delete own testimonial content',
     'roles' => array(
-      0 => 'anonymous user',
+      0 => 'assistant',
       1 => 'developer',
-      2 => 'support',
+      2 => 'professional',
+      3 => 'support',
     ),
     'module' => 'node',
   );
@@ -46,8 +49,10 @@ function pro_101_testimonials_feature_user_default_permissions() {
   $permissions['edit any testimonial content'] = array(
     'name' => 'edit any testimonial content',
     'roles' => array(
-      0 => 'developer',
-      1 => 'support',
+      0 => 'assistant',
+      1 => 'developer',
+      2 => 'professional',
+      3 => 'support',
     ),
     'module' => 'node',
   );
@@ -56,9 +61,11 @@ function pro_101_testimonials_feature_user_default_permissions() {
   $permissions['edit own testimonial content'] = array(
     'name' => 'edit own testimonial content',
     'roles' => array(
-      0 => 'anonymous user',
-      1 => 'developer',
-      2 => 'support',
+      0 => 'assistant',
+      1 => 'authenticated user',
+      2 => 'developer',
+      3 => 'professional',
+      4 => 'support',
     ),
     'module' => 'node',
   );
