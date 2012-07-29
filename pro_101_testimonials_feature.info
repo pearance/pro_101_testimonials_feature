@@ -22,7 +22,6 @@ features[field][] = node-testimonial-field_city_state
 features[field][] = node-testimonial-field_title
 features[field][] = node-testimonial-field_title_graphic
 features[node][] = testimonial
-features[rules_config][] = rules_redirect_post_testimonial_creation
 features[user_permission][] = create testimonial content
 features[user_permission][] = delete any testimonial content
 features[user_permission][] = delete own testimonial content
