@@ -15,10 +15,21 @@ function pro_101_testimonials_feature_default_rules_configuration() {
       "REQUIRES" : [ "rules" ],
       "ON" : [ "node_insert" ],
       "IF" : [
-        { "user_has_role" : { "account" : [ "node:author" ], "roles" : { "value" : { "2" : "2" } } } },
         { "node_is_of_type" : {
             "node" : [ "node" ],
             "type" : { "value" : { "testimonial" : "testimonial" } }
+          }
+        },
+        { "NOT user_has_role" : {
+            "account" : [ "node:author" ],
+            "roles" : { "value" : {
+                "8998634" : "8998634",
+                "96220023" : "96220023",
+                "160159362" : "160159362",
+                "121011395" : "121011395"
+              }
+            },
+            "operation" : "OR"
           }
         }
       ],
