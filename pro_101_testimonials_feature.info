@@ -19,7 +19,6 @@ features[ctools][] = views:views_default:3.0
 features[features_api][] = api:1
 features[field][] = node-testimonial-body
 features[field][] = node-testimonial-field_city_state
-features[field][] = node-testimonial-field_instruction
 features[field][] = node-testimonial-field_title
 features[field][] = node-testimonial-field_title_graphic
 features[node][] = testimonial

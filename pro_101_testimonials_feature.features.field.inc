@@ -173,70 +173,6 @@ function pro_101_testimonials_feature_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-testimonial-field_instruction'.
-  $fields['node-testimonial-field_instruction'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_instruction',
-      'field_permissions' => array(
-        'type' => '0',
-      ),
-      'foreign keys' => array(),
-      'indexes' => array(),
-      'locked' => '0',
-      'module' => 'markup',
-      'settings' => array(
-        'markup' => 'Please submit your testimonial by filling out the form below.',
-      ),
-      'translatable' => '0',
-      'type' => 'markup',
-    ),
-    'field_instance' => array(
-      'bundle' => 'testimonial',
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '0',
-        ),
-        'full' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_instruction',
-      'label' => 'Instruction',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 0,
-        'module' => 'markup',
-        'settings' => array(
-          'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-        ),
-        'type' => 'markup',
-        'weight' => 0,
-      ),
-    ),
-  );
-
   // Exported field: 'node-testimonial-field_title'.
   $fields['node-testimonial-field_title'] = array(
     'field_config' => array(
@@ -410,7 +346,6 @@ function pro_101_testimonials_feature_field_default_fields() {
   // Included for use with string extractors like potx.
   t('An image of you or your brand makes a BIG difference!');
   t('City, State');
-  t('Instruction');
   t('Optional.');
   t('Your Photo or Logo');
   t('Your Testimonial');
