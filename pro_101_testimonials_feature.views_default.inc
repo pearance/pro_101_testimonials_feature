@@ -34,9 +34,9 @@ function pro_101_testimonials_feature_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'node';
-  $handler->display->display_options['row_options']['links'] = 1;
-  $handler->display->display_options['row_options']['comments'] = 0;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['hide_empty'] = 0;
+  $handler->display->display_options['row_options']['default_field_elements'] = 1;
   /* Field: Your Testimonial */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
@@ -116,11 +116,36 @@ function pro_101_testimonials_feature_views_default_views() {
   $handler->display->display_options['fields']['field_title']['empty_zero'] = 0;
   $handler->display->display_options['fields']['field_title']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['field_title']['field_api_classes'] = 0;
+  /* Field: Content: City, State */
+  $handler->display->display_options['fields']['field_city_state']['id'] = 'field_city_state';
+  $handler->display->display_options['fields']['field_city_state']['table'] = 'field_data_field_city_state';
+  $handler->display->display_options['fields']['field_city_state']['field'] = 'field_city_state';
+  $handler->display->display_options['fields']['field_city_state']['label'] = '';
+  $handler->display->display_options['fields']['field_city_state']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_city_state']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_city_state']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_city_state']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_city_state']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_city_state']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_city_state']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_city_state']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_city_state']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_city_state']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['field_city_state']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_city_state']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_city_state']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_city_state']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_city_state']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_city_state']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_city_state']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_city_state']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_city_state']['field_api_classes'] = 0;
   /* Field: Node: Edit link */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['label'] = '';
+  $handler->display->display_options['fields']['edit_node']['exclude'] = TRUE;
   $handler->display->display_options['fields']['edit_node']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['edit_node']['alter']['make_link'] = 0;
   $handler->display->display_options['fields']['edit_node']['alter']['absolute'] = 0;
@@ -138,7 +163,21 @@ function pro_101_testimonials_feature_views_default_views() {
   $handler->display->display_options['fields']['edit_node']['hide_empty'] = 0;
   $handler->display->display_options['fields']['edit_node']['empty_zero'] = 0;
   $handler->display->display_options['fields']['edit_node']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['edit_node']['text'] = 'Edit';
+  $handler->display->display_options['fields']['edit_node']['text'] = 'New draft';
+  /* Field: Global: Contextual Links */
+  $handler->display->display_options['fields']['contextual_links']['id'] = 'contextual_links';
+  $handler->display->display_options['fields']['contextual_links']['table'] = 'views';
+  $handler->display->display_options['fields']['contextual_links']['field'] = 'contextual_links';
+  $handler->display->display_options['fields']['contextual_links']['label'] = '';
+  $handler->display->display_options['fields']['contextual_links']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['contextual_links']['fields'] = array(
+    'edit_node' => 'edit_node',
+    'body' => 0,
+    'title' => 0,
+    'field_title' => 0,
+    'field_city_state' => 0,
+  );
+  $handler->display->display_options['fields']['contextual_links']['destination'] = '1';
   /* Sort criterion: Global: Random */
   $handler->display->display_options['sorts']['random']['id'] = 'random';
   $handler->display->display_options['sorts']['random']['table'] = 'views';
