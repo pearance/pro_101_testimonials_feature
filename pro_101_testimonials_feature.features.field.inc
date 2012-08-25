@@ -262,6 +262,9 @@ function pro_101_testimonials_feature_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_title_graphic',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(
         'fid' => array(
           'columns' => array(
