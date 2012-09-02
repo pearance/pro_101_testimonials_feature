@@ -48,6 +48,12 @@ function pro_101_testimonials_feature_field_default_fields() {
       'deleted' => '0',
       'description' => '',
       'display' => array(
+        'colorbox' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'default' => array(
           'label' => 'hidden',
           'settings' => array(),
@@ -130,6 +136,12 @@ function pro_101_testimonials_feature_field_default_fields() {
       'deleted' => '0',
       'description' => 'example: Bronx, NY',
       'display' => array(
+        'colorbox' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'default' => array(
           'label' => 'hidden',
           'settings' => array(),
@@ -211,6 +223,12 @@ function pro_101_testimonials_feature_field_default_fields() {
       'deleted' => '0',
       'description' => 'Optional.',
       'display' => array(
+        'colorbox' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'default' => array(
           'label' => 'hidden',
           'settings' => array(),
@@ -292,6 +310,12 @@ function pro_101_testimonials_feature_field_default_fields() {
       'deleted' => '0',
       'description' => 'An image of you or your brand makes a BIG difference!',
       'display' => array(
+        'colorbox' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
         'default' => array(
           'label' => 'above',
           'settings' => array(),
