@@ -54,6 +54,9 @@ function pro_101_testimonials_feature_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'colorbox' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -133,6 +136,60 @@ function pro_101_testimonials_feature_strongarm() {
   $strongarm->name = 'nodeblock_view_mode_testimonial';
   $strongarm->value = 'full';
   $export['nodeblock_view_mode_testimonial'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'nodeformscols_field_placements_testimonial_default';
+  $strongarm->value = array(
+    'title' => array(
+      'region' => 'main',
+      'weight' => '0',
+      'has_required' => TRUE,
+      'title' => 'Your Name',
+    ),
+    'additional_settings' => array(
+      'region' => 'right',
+      'weight' => '1',
+      'has_required' => FALSE,
+      'title' => NULL,
+      'hidden' => 0,
+    ),
+    'actions' => array(
+      'region' => 'right',
+      'weight' => '0',
+      'has_required' => FALSE,
+      'title' => 'Save',
+      'hidden' => 0,
+    ),
+    'body' => array(
+      'region' => 'main',
+      'weight' => '1',
+      'has_required' => TRUE,
+      'title' => 'Your Testimonial',
+    ),
+    'field_title' => array(
+      'region' => 'main',
+      'weight' => '2',
+      'has_required' => FALSE,
+      'title' => 'Your Title',
+      'hidden' => 0,
+    ),
+    'field_title_graphic' => array(
+      'region' => 'main',
+      'weight' => '4',
+      'has_required' => FALSE,
+      'title' => 'Your Photo or Logo',
+      'hidden' => 0,
+    ),
+    'field_city_state' => array(
+      'region' => 'main',
+      'weight' => '3',
+      'has_required' => TRUE,
+      'title' => 'City, State',
+    ),
+  );
+  $export['nodeformscols_field_placements_testimonial_default'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

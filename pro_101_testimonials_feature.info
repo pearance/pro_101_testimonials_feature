@@ -42,6 +42,7 @@ features[variable][] = nodeblock_comment_link_testimonial
 features[variable][] = nodeblock_node_link_testimonial
 features[variable][] = nodeblock_testimonial
 features[variable][] = nodeblock_view_mode_testimonial
+features[variable][] = nodeformscols_field_placements_testimonial_default
 features[variable][] = pathauto_node_testimonial_pattern
 features[variable][] = rh_node_action_testimonial
 features[variable][] = rh_node_redirect_response_testimonial
