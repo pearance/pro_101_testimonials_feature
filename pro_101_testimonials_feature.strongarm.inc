@@ -23,7 +23,7 @@ function pro_101_testimonials_feature_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'contentanalysis_type_testimonial_enable';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['contentanalysis_type_testimonial_enable'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -80,6 +80,62 @@ function pro_101_testimonials_feature_strongarm() {
     ),
   );
   $export['field_bundle_settings_node__testimonial'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_firstlast_testimonial';
+  $strongarm->value = 0;
+  $export['flippy_firstlast_testimonial'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_first_label_testimonial';
+  $strongarm->value = 'First';
+  $export['flippy_first_label_testimonial'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_head_testimonial';
+  $strongarm->value = 0;
+  $export['flippy_head_testimonial'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_label_type_testimonial';
+  $strongarm->value = '0';
+  $export['flippy_label_type_testimonial'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_last_label_testimonial';
+  $strongarm->value = 'Last';
+  $export['flippy_last_label_testimonial'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_next_label_testimonial';
+  $strongarm->value = 'Next';
+  $export['flippy_next_label_testimonial'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_prev_label_testimonial';
+  $strongarm->value = 'Previous';
+  $export['flippy_prev_label_testimonial'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'flippy_testimonial';
+  $strongarm->value = 0;
+  $export['flippy_testimonial'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -263,6 +319,13 @@ function pro_101_testimonials_feature_strongarm() {
   $strongarm->name = 'show_preview_changes_testimonial';
   $strongarm->value = 0;
   $export['show_preview_changes_testimonial'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_moderation_default_state_testimonial';
+  $strongarm->value = 'draft';
+  $export['workbench_moderation_default_state_testimonial'] = $strongarm;
 
   return $export;
 }
