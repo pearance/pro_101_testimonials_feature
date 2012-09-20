@@ -40,7 +40,6 @@ function pro_101_testimonials_feature_user_default_permissions() {
       0 => 'assistant',
       1 => 'developer',
       2 => 'professional',
-      3 => 'support',
     ),
     'module' => 'node',
   );
