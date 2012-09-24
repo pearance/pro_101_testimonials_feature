@@ -206,10 +206,10 @@ function pro_101_testimonials_feature_strongarm() {
     ),
     'additional_settings' => array(
       'region' => 'right',
-      'weight' => '1',
+      'weight' => '3',
       'has_required' => FALSE,
       'title' => NULL,
-      'hidden' => 0,
+      'hidden' => 1,
     ),
     'actions' => array(
       'region' => 'right',
@@ -243,6 +243,20 @@ function pro_101_testimonials_feature_strongarm() {
       'weight' => '3',
       'has_required' => TRUE,
       'title' => 'City, State',
+    ),
+    'contentanalysis' => array(
+      'region' => 'right',
+      'weight' => '1',
+      'has_required' => FALSE,
+      'title' => 'Content Analysis',
+      'hidden' => 0,
+    ),
+    'metatags' => array(
+      'region' => 'right',
+      'weight' => '2',
+      'has_required' => FALSE,
+      'title' => 'Meta Tags',
+      'hidden' => 0,
     ),
   );
   $export['nodeformscols_field_placements_testimonial_default'] = $strongarm;
