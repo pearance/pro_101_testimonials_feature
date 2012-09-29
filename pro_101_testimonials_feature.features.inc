@@ -31,7 +31,7 @@ function pro_101_testimonials_feature_node_info() {
       'base' => 'node_content',
       'description' => t('Use of <em>Testimonial</em> should be by existing and former clients to testify to the quality of your service.'),
       'has_title' => '1',
-      'title_label' => t('Your Name'),
+      'title_label' => t('Name'),
       'help' => t('Please provide a testimonial in 300 characters or less.'),
     ),
   );

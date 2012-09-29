@@ -57,23 +57,29 @@ function pro_101_testimonials_feature_strongarm() {
       'colorbox' => array(
         'custom_settings' => FALSE,
       ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_complete' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '2',
+          'weight' => '1',
         ),
         'path' => array(
-          'weight' => '7',
+          'weight' => '6',
         ),
         'redirect' => array(
-          'weight' => '6',
+          'weight' => '5',
         ),
         'mollom' => array(
           'weight' => '99',
         ),
         'metatags' => array(
-          'weight' => '8',
+          'weight' => '7',
         ),
       ),
       'display' => array(),
@@ -200,47 +206,40 @@ function pro_101_testimonials_feature_strongarm() {
   $strongarm->value = array(
     'title' => array(
       'region' => 'main',
-      'weight' => '0',
+      'weight' => '2',
       'has_required' => TRUE,
-      'title' => 'Your Name',
+      'title' => 'Name',
     ),
     'additional_settings' => array(
       'region' => 'right',
       'weight' => '3',
       'has_required' => FALSE,
       'title' => NULL,
-      'hidden' => 1,
+      'hidden' => 0,
     ),
     'actions' => array(
       'region' => 'right',
       'weight' => '0',
       'has_required' => FALSE,
-      'title' => 'Save',
+      'title' => 'Publish',
       'hidden' => 0,
     ),
     'body' => array(
       'region' => 'main',
-      'weight' => '1',
+      'weight' => '0',
       'has_required' => TRUE,
-      'title' => 'Your Testimonial',
-    ),
-    'field_title' => array(
-      'region' => 'main',
-      'weight' => '2',
-      'has_required' => FALSE,
-      'title' => 'Your Title',
-      'hidden' => 0,
+      'title' => 'Testimonial',
     ),
     'field_title_graphic' => array(
       'region' => 'main',
-      'weight' => '4',
+      'weight' => '5',
       'has_required' => FALSE,
-      'title' => 'Your Photo or Logo',
+      'title' => 'Photo or Logo',
       'hidden' => 0,
     ),
     'field_city_state' => array(
       'region' => 'main',
-      'weight' => '3',
+      'weight' => '4',
       'has_required' => TRUE,
       'title' => 'City, State',
     ),
@@ -258,6 +257,19 @@ function pro_101_testimonials_feature_strongarm() {
       'title' => 'Meta Tags',
       'hidden' => 0,
     ),
+    'field_testimonial_title' => array(
+      'region' => 'main',
+      'weight' => '3',
+      'has_required' => FALSE,
+      'title' => 'Title',
+      'hidden' => 0,
+    ),
+    'title_field' => array(
+      'region' => 'main',
+      'weight' => '1',
+      'has_required' => TRUE,
+      'title' => 'Name',
+    ),
   );
   $export['nodeformscols_field_placements_testimonial_default'] = $strongarm;
 
@@ -265,17 +277,14 @@ function pro_101_testimonials_feature_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_testimonial';
-  $strongarm->value = array(
-    0 => 'moderation',
-    1 => 'revision',
-  );
+  $strongarm->value = array();
   $export['node_options_testimonial'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_testimonial';
-  $strongarm->value = '0';
+  $strongarm->value = '1';
   $export['node_preview_testimonial'] = $strongarm;
 
   $strongarm = new stdClass();
