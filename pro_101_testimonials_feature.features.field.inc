@@ -68,7 +68,7 @@ function pro_101_testimonials_feature_field_default_fields() {
             'diff_custom_settings' => array(),
           ),
           'type' => 'text_default',
-          'weight' => '4',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -83,7 +83,7 @@ function pro_101_testimonials_feature_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'body',
-      'label' => 'Your Testimonial',
+      'label' => 'Testimonial',
       'required' => 1,
       'settings' => array(
         'display_summary' => 0,
@@ -102,7 +102,7 @@ function pro_101_testimonials_feature_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '1',
+        'weight' => '0',
       ),
     ),
   );
@@ -152,7 +152,7 @@ function pro_101_testimonials_feature_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '3',
+          'weight' => '2',
         ),
         'full' => array(
           'label' => 'hidden',
@@ -162,7 +162,7 @@ function pro_101_testimonials_feature_field_default_fields() {
             'diff_custom_settings' => array(),
           ),
           'type' => 'text_default',
-          'weight' => '3',
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -172,7 +172,7 @@ function pro_101_testimonials_feature_field_default_fields() {
             'diff_custom_settings' => array(),
           ),
           'type' => 'text_default',
-          'weight' => '3',
+          'weight' => '2',
         ),
       ),
       'entity_type' => 'node',
@@ -192,21 +192,21 @@ function pro_101_testimonials_feature_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '4',
+        'weight' => '3',
       ),
     ),
   );
 
-  // Exported field: 'node-testimonial-field_title'.
-  $fields['node-testimonial-field_title'] = array(
+  // Exported field: 'node-testimonial-field_testimonial_title'.
+  $fields['node-testimonial-field_testimonial_title'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_title',
+      'field_name' => 'field_testimonial_title',
       'field_permissions' => array(
-        'type' => '2',
+        'type' => '0',
       ),
       'foreign keys' => array(
         'format' => array(
@@ -233,19 +233,13 @@ function pro_101_testimonials_feature_field_default_fields() {
       'bundle' => 'testimonial',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'Optional.',
+      'description' => 'This is optional.',
       'display' => array(
-        'colorbox' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
         'default' => array(
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '2',
+          'weight' => '0',
         ),
         'full' => array(
           'label' => 'hidden',
@@ -255,7 +249,7 @@ function pro_101_testimonials_feature_field_default_fields() {
             'diff_custom_settings' => array(),
           ),
           'type' => 'text_default',
-          'weight' => '2',
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -265,12 +259,12 @@ function pro_101_testimonials_feature_field_default_fields() {
             'diff_custom_settings' => array(),
           ),
           'type' => 'text_default',
-          'weight' => '2',
+          'weight' => '3',
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_title',
-      'label' => 'Your Title',
+      'field_name' => 'field_testimonial_title',
+      'label' => 'Professionial Title',
       'required' => 0,
       'settings' => array(
         'text_processing' => '0',
@@ -285,7 +279,7 @@ function pro_101_testimonials_feature_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '3',
+        'weight' => '2',
       ),
     ),
   );
@@ -299,7 +293,7 @@ function pro_101_testimonials_feature_field_default_fields() {
       'entity_types' => array(),
       'field_name' => 'field_title_graphic',
       'field_permissions' => array(
-        'type' => '2',
+        'type' => '0',
       ),
       'foreign keys' => array(
         'fid' => array(
@@ -335,10 +329,10 @@ function pro_101_testimonials_feature_field_default_fields() {
           'weight' => 0,
         ),
         'default' => array(
-          'label' => 'above',
+          'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '4',
+          'weight' => '3',
         ),
         'full' => array(
           'label' => 'hidden',
@@ -353,16 +347,22 @@ function pro_101_testimonials_feature_field_default_fields() {
           'weight' => '0',
         ),
         'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => '9',
+          'label' => 'hidden',
+          'module' => 'image',
+          'settings' => array(
+            'diff_custom' => 0,
+            'diff_custom_settings' => array(),
+            'image_link' => '',
+            'image_style' => 'square_thumbnail',
+          ),
+          'type' => 'image',
+          'weight' => '1',
         ),
       ),
       'ds_extras_field_template' => '',
       'entity_type' => 'node',
       'field_name' => 'field_title_graphic',
-      'label' => 'Your Photo or Logo',
+      'label' => 'Photo or Logo',
       'required' => 0,
       'settings' => array(
         'alt_field' => 0,
@@ -381,10 +381,101 @@ function pro_101_testimonials_feature_field_default_fields() {
         'settings' => array(
           'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
           'preview_image_style' => 'thumbnail',
-          'progress_indicator' => 'throbber',
+          'progress_indicator' => 'bar',
         ),
         'type' => 'image_image',
-        'weight' => '5',
+        'weight' => '4',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-testimonial-title_field'.
+  $fields['node-testimonial-title_field'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'title_field',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => 255,
+      ),
+      'translatable' => '1',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'testimonial',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '4',
+        ),
+        'full' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(
+            'diff_custom' => 0,
+            'diff_custom_settings' => array(),
+          ),
+          'type' => 'text_default',
+          'weight' => '2',
+        ),
+        'teaser' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(
+            'diff_custom' => 0,
+            'diff_custom_settings' => array(),
+          ),
+          'type' => 'text_default',
+          'weight' => '4',
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'title_field',
+      'label' => 'Name',
+      'required' => 1,
+      'settings' => array(
+        'hide_label' => array(
+          'entity' => 0,
+          'page' => 0,
+        ),
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'maxlength_js' => 0,
+          'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '1',
       ),
     ),
   );
@@ -393,10 +484,11 @@ function pro_101_testimonials_feature_field_default_fields() {
   // Included for use with string extractors like potx.
   t('An image of you or your brand makes a BIG difference!');
   t('City, State');
-  t('Optional.');
-  t('Your Photo or Logo');
-  t('Your Testimonial');
-  t('Your Title');
+  t('Name');
+  t('Photo or Logo');
+  t('Professionial Title');
+  t('Testimonial');
+  t('This is optional.');
   t('example: Bronx, NY');
 
   return $fields;
