@@ -19,6 +19,7 @@ function pro_101_testimonials_feature_default_rules_configuration() {
         { "NOT user_has_role" : {
             "account" : [ "account" ],
             "roles" : { "value" : {
+                "1" : "1",
                 "8998634" : "8998634",
                 "96220023" : "96220023",
                 "160159362" : "160159362",
@@ -29,7 +30,7 @@ function pro_101_testimonials_feature_default_rules_configuration() {
           }
         }
       ],
-      "DO" : [ { "redirect" : { "url" : "add\\/testimonial" } } ]
+      "DO" : [ { "redirect" : { "url" : "#overlay=add\\/testimonial" } } ]
     }
   }');
   $items['rules_testimonial_creation_from_authenticated_user'] = entity_import('rules_config', '{ "rules_testimonial_creation_from_authenticated_user" : {
@@ -37,7 +38,7 @@ function pro_101_testimonials_feature_default_rules_configuration() {
       "PLUGIN" : "reaction rule",
       "WEIGHT" : "-10",
       "TAGS" : [ "authenticated" ],
-      "REQUIRES" : [ "rules", "workbench_moderation" ],
+      "REQUIRES" : [ "rules" ],
       "ON" : [ "node_insert" ],
       "IF" : [
         { "node_is_of_type" : {
@@ -59,18 +60,20 @@ function pro_101_testimonials_feature_default_rules_configuration() {
         }
       ],
       "DO" : [
-        { "workbench_moderation_set_state" : {
-            "node" : [ "node" ],
-            "moderation_state" : "needs_review",
-            "force_transition" : 1
+        { "mail" : {
+            "to" : "support@pearance.com",
+            "subject" : "NEW CONTENT - [[node:content-type]@[site:name]]",
+            "message" : "Title: [node:title]\\\\r\\\\nCreated: [node:created]\\\\r\\\\nLast Update: [node:changed]\\\\r\\\\n\\\\r\\\\nRevision Msg: [node:log]\\\\r\\\\n\\\\r\\\\nContent URL: [node:url]",
+            "from" : "[site:mail]",
+            "language" : [ "" ]
           }
         },
-        { "redirect" : { "url" : "admin\\/workbench" } },
         { "drupal_message" : {
-            "message" : "Thank you for your testimonial. You are free to make edits until its publication.",
+            "message" : "Thank you for your testimonial. It is available for edit only prior to publication.",
             "repeat" : 0
           }
-        }
+        },
+        { "node_unpublish" : { "node" : [ "node" ] } }
       ]
     }
   }');
