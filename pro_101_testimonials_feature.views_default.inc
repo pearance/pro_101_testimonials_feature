@@ -59,7 +59,7 @@ function pro_101_testimonials_feature_views_default_views() {
   $handler->display->display_options['fields']['body']['ui_name'] = 'Your Testimonial';
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['body']['alter']['text'] = '<p>[body]</p>';
+  $handler->display->display_options['fields']['body']['alter']['text'] = '<blockquote><span>[body]</span></blockquote>';
   $handler->display->display_options['fields']['body']['alter']['max_length'] = '300';
   $handler->display->display_options['fields']['body']['alter']['more_link_text'] = 'Full Testimony';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
@@ -75,19 +75,12 @@ function pro_101_testimonials_feature_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Your Title */
-  $handler->display->display_options['fields']['field_title']['id'] = 'field_title';
-  $handler->display->display_options['fields']['field_title']['table'] = 'field_data_field_title';
-  $handler->display->display_options['fields']['field_title']['field'] = 'field_title';
-  $handler->display->display_options['fields']['field_title']['ui_name'] = 'Your Title';
-  $handler->display->display_options['fields']['field_title']['label'] = '';
-  $handler->display->display_options['fields']['field_title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_title']['hide_empty'] = TRUE;
   /* Field: Content: City, State */
   $handler->display->display_options['fields']['field_city_state']['id'] = 'field_city_state';
   $handler->display->display_options['fields']['field_city_state']['table'] = 'field_data_field_city_state';
   $handler->display->display_options['fields']['field_city_state']['field'] = 'field_city_state';
   $handler->display->display_options['fields']['field_city_state']['label'] = '';
+  $handler->display->display_options['fields']['field_city_state']['element_type'] = 'em';
   $handler->display->display_options['fields']['field_city_state']['element_label_colon'] = FALSE;
   /* Field: Content: Edit link */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
@@ -150,7 +143,7 @@ function pro_101_testimonials_feature_views_default_views() {
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['label'] = 'More Testimonials';
-  $handler->display->display_options['footer']['area']['content'] = '<a href="testimonials">More Testimonials</a>';
+  $handler->display->display_options['footer']['area']['content'] = '<a class="button" href="testimonials">More Testimonials</a>';
   $handler->display->display_options['footer']['area']['format'] = 'plain_text';
   $handler->display->display_options['block_description'] = 'Testimonials';
   $export['testimonals'] = $view;
