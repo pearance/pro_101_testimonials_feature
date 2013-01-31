@@ -143,7 +143,7 @@ function pro_101_testimonials_feature_views_default_views() {
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['label'] = 'More Testimonials';
-  $handler->display->display_options['footer']['area']['content'] = '<a class="button" href="testimonials">More Testimonials</a>';
+  $handler->display->display_options['footer']['area']['content'] = '<a class="button" href="/testimonials">More Testimonials</a>';
   $handler->display->display_options['footer']['area']['format'] = 'plain_text';
   $handler->display->display_options['block_description'] = 'Testimonials';
   $export['testimonals'] = $view;
