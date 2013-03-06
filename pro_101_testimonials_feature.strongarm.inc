@@ -254,7 +254,7 @@ function pro_101_testimonials_feature_strongarm() {
     ),
     'additional_settings' => array(
       'region' => 'right',
-      'weight' => '3',
+      'weight' => '1',
       'has_required' => FALSE,
       'title' => NULL,
       'hidden' => 0,
@@ -285,25 +285,11 @@ function pro_101_testimonials_feature_strongarm() {
       'has_required' => TRUE,
       'title' => 'City, State',
     ),
-    'contentanalysis' => array(
-      'region' => 'right',
-      'weight' => '1',
-      'has_required' => FALSE,
-      'title' => 'Content Analysis',
-      'hidden' => 0,
-    ),
-    'metatags' => array(
-      'region' => 'right',
-      'weight' => '2',
-      'has_required' => FALSE,
-      'title' => 'Meta Tags',
-      'hidden' => 0,
-    ),
     'field_testimonial_title' => array(
       'region' => 'main',
       'weight' => '3',
       'has_required' => FALSE,
-      'title' => 'Title',
+      'title' => 'Professionial Title',
       'hidden' => 0,
     ),
     'title_field' => array(

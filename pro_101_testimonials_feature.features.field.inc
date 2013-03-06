@@ -115,6 +115,9 @@ function pro_101_testimonials_feature_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_city_state',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -140,7 +143,7 @@ function pro_101_testimonials_feature_field_default_fields() {
       'bundle' => 'testimonial',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'example: Bronx, NY',
+      'description' => '',
       'display' => array(
         'colorbox' => array(
           'label' => 'above',
@@ -233,7 +236,7 @@ function pro_101_testimonials_feature_field_default_fields() {
       'bundle' => 'testimonial',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'This is optional.',
+      'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
@@ -264,7 +267,7 @@ function pro_101_testimonials_feature_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_testimonial_title',
-      'label' => 'Professionial Title',
+      'label' => 'Title (optional)',
       'required' => 0,
       'settings' => array(
         'text_processing' => '0',
@@ -320,7 +323,7 @@ function pro_101_testimonials_feature_field_default_fields() {
     'field_instance' => array(
       'bundle' => 'testimonial',
       'deleted' => '0',
-      'description' => 'An image of you or your brand makes a BIG difference!',
+      'description' => '',
       'display' => array(
         'colorbox' => array(
           'label' => 'above',
@@ -379,16 +382,38 @@ function pro_101_testimonials_feature_field_default_fields() {
         'active' => 1,
         'module' => 'image',
         'settings' => array(
-          'manualcrop_crop_info' => TRUE,
-          'manualcrop_default_crop_area' => TRUE,
-          'manualcrop_enable' => FALSE,
-          'manualcrop_inline_crop' => FALSE,
-          'manualcrop_instant_crop' => FALSE,
-          'manualcrop_instant_preview' => TRUE,
-          'manualcrop_require_cropping' => array(),
-          'manualcrop_styles_list' => array(),
+          'manualcrop_crop_info' => 1,
+          'manualcrop_default_crop_area' => 1,
+          'manualcrop_enable' => 0,
+          'manualcrop_inline_crop' => 0,
+          'manualcrop_instant_crop' => 0,
+          'manualcrop_instant_preview' => 1,
+          'manualcrop_require_cropping' => array(
+            'fluid-image' => 0,
+            'medium' => 0,
+            'narrow-image' => 0,
+            'normal-image' => 0,
+            'rectangular-image' => 0,
+            'showcase-wide' => 0,
+            'thumbnail' => 0,
+            'thumbnail-image' => 0,
+            'thumbnail-mini' => 0,
+            'wide-image' => 0,
+          ),
+          'manualcrop_styles_list' => array(
+            'fluid-image' => 0,
+            'medium' => 0,
+            'narrow-image' => 0,
+            'normal-image' => 0,
+            'rectangular-image' => 0,
+            'showcase-wide' => 0,
+            'thumbnail' => 0,
+            'thumbnail-image' => 0,
+            'thumbnail-mini' => 0,
+            'wide-image' => 0,
+          ),
           'manualcrop_styles_mode' => 'exclude',
-          'manualcrop_thumblist' => FALSE,
+          'manualcrop_thumblist' => 0,
           'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
           'preview_image_style' => 'thumbnail',
           'progress_indicator' => 'bar',
@@ -492,14 +517,11 @@ function pro_101_testimonials_feature_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('An image of you or your brand makes a BIG difference!');
   t('City, State');
   t('Name');
   t('Photo or Logo');
-  t('Professionial Title');
   t('Testimonial');
-  t('This is optional.');
-  t('example: Bronx, NY');
+  t('Title (optional)');
 
   return $fields;
 }
